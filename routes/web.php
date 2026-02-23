@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -55,3 +56,6 @@ Route::get('/about', AboutController::class);
 Route::get('/articles/{id}', ArticleController::class);
 
 Route::resource('photos', PhotoController::class);
+
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+
